@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: lws-auth
+
+server:
+  port: 9000
