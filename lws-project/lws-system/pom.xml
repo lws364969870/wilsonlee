@@ -39,6 +39,7 @@
         <dependency>
             <groupId>com.lws</groupId>
             <artifactId>system-api</artifactId>
+            <version>1.0.0</version>
         </dependency>
     </dependencies>
 
