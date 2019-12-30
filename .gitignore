@@ -1,4 +1,11 @@
-*.idea
+############################# IDEA
+.idea
+*.iws
 *.iml
+*.ipr
+
+
+############################# PROJECT
+*.log
 *.class
-target
+target/

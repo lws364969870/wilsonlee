@@ -10,7 +10,7 @@
     </parent>
 
     <groupId>com.lws</groupId>
-    <artifactId>lws-code-generator</artifactId>
+    <artifactId>lws-generator</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
 
