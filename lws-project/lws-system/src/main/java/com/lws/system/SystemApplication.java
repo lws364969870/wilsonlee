@@ -5,7 +5,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @Slf4j
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {
+        "com.lws.system",
+        "com.lws.common"
+})
 public class SystemApplication {
 
     public static void main(String[] args) {
