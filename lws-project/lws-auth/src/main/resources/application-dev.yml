@@ -1,0 +1,10 @@
+spring:
+  profiles: dev
+
+# 注册中心dev环境
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://user:password@ip/eureka/

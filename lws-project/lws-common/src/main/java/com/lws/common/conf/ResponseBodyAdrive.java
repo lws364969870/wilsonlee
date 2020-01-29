@@ -23,7 +23,7 @@ public class ResponseBodyAdrive implements ResponseBodyAdvice {
     }
 
     public Object beforeBodyWrite(Object o, MethodParameter methodParameter, MediaType mediaType, Class aClass, ServerHttpRequest serverHttpRequest, ServerHttpResponse serverHttpResponse) {
-s        if (o instanceof BaseResponse) {
+        if (o instanceof BaseResponse) {
             return o;
         }
         return BaseResponse.success(o);
