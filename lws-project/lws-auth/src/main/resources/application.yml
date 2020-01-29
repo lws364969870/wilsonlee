@@ -5,11 +5,10 @@ spring:
   application:
     name: lws-auth
   profiles:
-    active: local
+    active: dev
 
 ###日志配置
 logging:
-  file: ${spring.logistics-log.path}/${spring.application.name}.log
   level:
     root: info
     com.midea.mgp.statecraft: debug
