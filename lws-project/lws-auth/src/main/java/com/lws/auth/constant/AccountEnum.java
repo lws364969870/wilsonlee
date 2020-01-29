@@ -23,7 +23,7 @@ public enum AccountEnum {
 
     public static boolean checkAccount(String userName, String pwd) {
         try {
-            AccountEnum accountEnum = AccountEnum.valueOf(userName);
+            AccountEnum accountEnum = AccountEnum.valueOf(userName.toUpperCase());
             return accountEnum.getPwd().equals(pwd);
         } catch (IllegalArgumentException e) {
             return false;
