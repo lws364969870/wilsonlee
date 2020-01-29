@@ -21,12 +21,12 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
-            <version>${spring-could.version}</version>
+            <version>${spring.could.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-openfeign-core</artifactId>
-            <version>${spring-could.version}</version>
+            <version>${spring.could.version}</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>

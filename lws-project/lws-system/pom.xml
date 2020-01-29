@@ -19,7 +19,7 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-context</artifactId>
-            <version>${spring-could.version}</version>
+            <version>${spring.could.version}</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -29,7 +29,6 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-            <version>${spring-boot.version}</version>
         </dependency>
         <dependency>
             <groupId>com.lws</groupId>

@@ -12,5 +12,4 @@ public class LwsException extends RuntimeException {
 
     private String errorCode;
     private String errorMessage;
-    private String[] params;
 }

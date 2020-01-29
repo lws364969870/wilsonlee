@@ -1,6 +1,6 @@
 package com.lws.common.utils;
 
-public class ExceptionUtil {
+public class ExceptionUtils {
 
     public String getStarckMessage(Exception e) {
         StringBuffer msg = new StringBuffer();
