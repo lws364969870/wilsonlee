@@ -9,3 +9,4 @@
 *.log
 *.class
 target/
+/lws-project/lws-generator/src/main/resources/datasource.properties
