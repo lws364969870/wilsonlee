@@ -9,6 +9,7 @@ import com.baomidou.mybatisplus.generator.config.StrategyConfig;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
 import com.lws.generator.constant.ModulEnum;
+import com.lws.generator.util.DatasourcePropertiesUtils;
 
 import java.io.File;
 
@@ -34,15 +35,16 @@ public class CodeGenerator {
         //4、主键类型
         globalConfig.setIdType(IdType.AUTO);
 
-
         /** 策略配置 */
         StrategyConfig strategyConfig = new StrategyConfig();
         //1、需要生成的表
-        strategyConfig.setInclude("lws_order");
+        strategyConfig.setInclude("user");
         //2、实体命名策略 - 驼峰
         strategyConfig.setNaming(NamingStrategy.underline_to_camel);
         //3、字段命名策略 - 驼峰
         strategyConfig.setColumnNaming(NamingStrategy.underline_to_camel);
+        //4、lombok
+        strategyConfig.setEntityLombokModel(true);
 
         /** 包配置 */
         PackageConfig packageConfig = new PackageConfig();
@@ -53,10 +55,10 @@ public class CodeGenerator {
 
         /** 数据库配置 */
         DataSourceConfig dataSourceConfig = new DataSourceConfig();
-        dataSourceConfig.setDriverName("com.mysql.jdbc.Driver");
-        dataSourceConfig.setUrl("jdbc:mysql://127.0.0.1:3306/lws?useUnicode=true&characterEncoding=utf8");
-        dataSourceConfig.setUsername("root");
-        dataSourceConfig.setPassword("root");
+        dataSourceConfig.setDriverName(DatasourcePropertiesUtils.getProperty("mysql.DriverName"));
+        dataSourceConfig.setUrl(DatasourcePropertiesUtils.getProperty("mysql.Url"));
+        dataSourceConfig.setUsername(DatasourcePropertiesUtils.getProperty("mysql.Username"));
+        dataSourceConfig.setPassword(DatasourcePropertiesUtils.getProperty("mysql.Password"));
 
         /** 代码生成 */
         AutoGenerator autoGenerator = new AutoGenerator();
