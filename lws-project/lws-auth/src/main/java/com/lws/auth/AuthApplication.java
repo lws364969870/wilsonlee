@@ -7,7 +7,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @Slf4j
 @EnableFeignClients({"com.lws.system.api"})
-@SpringBootApplication(scanBasePackages = {"com.lws.auth.**", "com.lws.system.**"})
+@SpringBootApplication(scanBasePackages = {"com.lws.auth", "com.lws.system","com.lws.common"})
 public class AuthApplication {
 
     public static void main(String[] args) {

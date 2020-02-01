@@ -24,26 +24,26 @@
         <java.version>1.8</java.version>
         <spring.could.version>2.2.0.RELEASE</spring.could.version>
         <spring.boot.version>2.2.0.RELEASE</spring.boot.version>
-        <spring.boot.admin.version>2.2.0</spring.boot.admin.version>
-
-        <mybatis.plus.boot.starter.version>3.2.0</mybatis.plus.boot.starter.version>
         <mysql.version>5.1.47</mysql.version>
         <slf4j.version>1.7.26</slf4j.version>
-
-        <swagger2.version>2.6.1</swagger2.version>
+        <mybatisplus.boot.starter.version>3.3.0</mybatisplus.boot.starter.version>
         <commons.lang3.version>3.9</commons.lang3.version>
+        <fastjson.version>1.2.62</fastjson.version>
+        <lombok.version>1.18.10</lombok.version>
+
+
+        <spring.boot.admin.version>2.2.0</spring.boot.admin.version>
+        <swagger2.version>2.6.1</swagger2.version>
         <commons.collections4.version>4.4</commons.collections4.version>
         <commons.io.version>2.6</commons.io.version>
         <commons.codec.version>1.13</commons.codec.version>
         <commons.net.version>3.6</commons.net.version>
         <commons.pool2.version>2.7.0</commons.pool2.version>
         <commons.text.version>1.8</commons.text.version>
-        <fastjson.version>1.2.62</fastjson.version>
         <velocity.version>1.7</velocity.version>
         <druid.version>1.1.20</druid.version>
         <reflections.version>0.9.11</reflections.version>
         <jansi.version>1.18</jansi.version>
-        <lombok.version>1.18.10</lombok.version>
         <hutool.version>5.0.4</hutool.version>
         <junit.version>4.12</junit.version>
         <ini4j.version>0.5.4</ini4j.version>
@@ -51,7 +51,6 @@
         <shiro.version>1.4.1</shiro.version>
         <jwt.version>3.8.3</jwt.version>
         <guava.version>28.1.jre</guava.version>
-
         <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
         <maven.resources.plugin.version>3.1.0</maven.resources.plugin.version>
         <maven.surefire.plugin.version>2.22.2</maven.surefire.plugin.version>
@@ -91,6 +90,20 @@
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
                 <version>${fastjson.version}</version>
+            </dependency>
+
+            <!-- mybatisplus插件 -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatisplus.boot.starter.version}</version>
+            </dependency>
+
+            <!-- mysql插件 -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
             </dependency>
 
         </dependencies>
