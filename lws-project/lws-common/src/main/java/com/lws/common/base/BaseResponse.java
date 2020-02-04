@@ -9,6 +9,7 @@ public class BaseResponse implements Serializable {
 
     private String code;
     private Object data;
+    private String message;
     private String stackMsg;
 
     public static BaseResponse success(Object o) {

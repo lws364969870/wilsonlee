@@ -2,7 +2,7 @@ package com.lws.common.utils;
 
 public class ExceptionUtils {
 
-    public String getStarckMessage(Exception e) {
+    public static String getStarckMessage(Exception e) {
         StringBuffer msg = new StringBuffer();
         if (e != null) {
             msg = new StringBuffer("");
