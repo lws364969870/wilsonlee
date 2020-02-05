@@ -15,10 +15,11 @@
         <module>lws-auth</module>
         <module>lws-system</module>
     </modules>
-
     <!-- 版本仲裁 -->
     <properties>
         <utf8>UTF-8</utf8>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>${utf8}</project.build.sourceEncoding>
         <project.reporting.outputEncoding>${utf8}</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
