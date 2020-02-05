@@ -5,25 +5,30 @@ import lombok.Setter;
 
 public enum ModulEnum {
 
-    AUTH("auth", "lws-auth"),
-    SYSTEM("system", "lws-system");
+    AUTH("auth", "lws-auth", "com.lws"),
+    SYSTEM("system", "lws-system", "com.lws");
 
     /**
      * 模块名称
      */
     @Getter
-    @Setter
     private String moduleName;
 
     /**
-     * 路径
+     * 物理路径
      */
     @Getter
-    @Setter
     private String url;
 
-    ModulEnum(String moduleName, String url) {
+    /**
+     * 包名称
+     */
+    @Getter
+    private String pageageName;
+
+    ModulEnum(String moduleName, String url, String pageageName) {
         this.moduleName = moduleName;
         this.url = url;
+        this.pageageName = pageageName;
     }
 }

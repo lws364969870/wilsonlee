@@ -34,24 +34,28 @@ public class CodeGenerator {
         globalConfig.setOutputDir("D:\\workspace\\wilsonlee\\lws-project" + File.separator + module.getUrl() + "\\src\\main\\java");
         //4、主键类型
         globalConfig.setIdType(IdType.AUTO);
+        //5、生成swagger2
+        globalConfig.setSwagger2(true);
 
         /** 策略配置 */
         StrategyConfig strategyConfig = new StrategyConfig();
         //1、需要生成的表
-        strategyConfig.setInclude("user");
+        strategyConfig.setInclude("gov_user_info","gov_role_type");
         //2、实体命名策略 - 驼峰
         strategyConfig.setNaming(NamingStrategy.underline_to_camel);
         //3、字段命名策略 - 驼峰
         strategyConfig.setColumnNaming(NamingStrategy.underline_to_camel);
         //4、lombok
         strategyConfig.setEntityLombokModel(true);
+        //5、过滤表前缀
+        strategyConfig.setTablePrefix("gov_");
 
         /** 包配置 */
         PackageConfig packageConfig = new PackageConfig();
         //1、模块名称
         packageConfig.setModuleName(module.getModuleName());
-        //2、包
-        packageConfig.setParent("com.lws");
+        //2、包名
+        packageConfig.setParent(module.getPageageName());
 
         /** 数据库配置 */
         DataSourceConfig dataSourceConfig = new DataSourceConfig();
