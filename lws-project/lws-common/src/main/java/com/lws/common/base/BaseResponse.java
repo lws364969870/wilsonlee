@@ -1,8 +1,8 @@
 package com.lws.common.base;
 
-import lombok.Data;
-
 import java.io.Serializable;
+
+import lombok.Data;
 
 @Data
 public class BaseResponse implements Serializable {
@@ -19,3 +19,4 @@ public class BaseResponse implements Serializable {
         return baseResponse;
     }
 }
+

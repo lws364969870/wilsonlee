@@ -10,5 +10,5 @@ public interface SystemFeign {
 
     @ResponseBody
     @PostMapping(value = "/getSystem")
-    public SystemDto<String> getSystem();
+    public SystemDto getSystem();
 }

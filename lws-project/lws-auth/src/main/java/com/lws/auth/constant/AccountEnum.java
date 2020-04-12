@@ -1,6 +1,5 @@
 package com.lws.auth.constant;
 
-
 import lombok.Getter;
 import lombok.Setter;
 

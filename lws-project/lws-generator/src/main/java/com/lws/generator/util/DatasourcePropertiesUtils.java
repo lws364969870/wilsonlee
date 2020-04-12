@@ -19,7 +19,9 @@ public class DatasourcePropertiesUtils {
         String fileName = "datasource.properties";
         props = new Properties();
         try {
-            props.load(new InputStreamReader(DatasourcePropertiesUtils.class.getClassLoader().getResourceAsStream(fileName), "UTF-8"));
+            props.load(
+                new InputStreamReader(DatasourcePropertiesUtils.class.getClassLoader().getResourceAsStream(fileName),
+                    "UTF-8"));
         } catch (IOException e) {
             log.error("配置文件读取异常");
         }

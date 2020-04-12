@@ -1,30 +1,26 @@
 package com.lws.common.utils;
 
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.mail.MessagingException;
+import javax.mail.internet.MimeMessage;
 
 import lombok.Getter;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.util.CollectionUtils;
 
-import javax.annotation.Resource;
-import javax.mail.MessagingException;
-import javax.mail.internet.MimeMessage;
-import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
-
 @Slf4j
-@Configuration
 public class EmailUtils {
 
-    @Resource
     private JavaMailSender javaMailSender;
 
-    @Value("${spring.mail.username}" )
+    @Value("${spring.mail.username}")
     private String sendFrom;
 
     /**
@@ -38,7 +34,8 @@ public class EmailUtils {
      * @param isHtml     内容是否解析为HTML
      * @param attachment 附件
      */
-    public boolean sendSimpleMail(String subject, String[] sendTo, String[] sendCc, String[] sendBcc, String content, boolean isHtml, List<File> attachment) throws MessagingException {
+    public boolean sendSimpleMail(String subject, String[] sendTo, String[] sendCc, String[] sendBcc, String content,
+        boolean isHtml, List<File> attachment) throws MessagingException {
 
         // 建立HTML邮件消息
         MimeMessage mailMessage = javaMailSender.createMimeMessage();
@@ -46,7 +43,7 @@ public class EmailUtils {
         //是否包含附件
         boolean isFiles = !CollectionUtils.isEmpty(attachment);
         //附件模式要设置为true
-        MimeMessageHelper messageHelper = new MimeMessageHelper(mailMessage, isFiles, "utf-8" );
+        MimeMessageHelper messageHelper = new MimeMessageHelper(mailMessage, isFiles, "utf-8");
         mailMessage.setFrom(sendFrom);
         //主题
         messageHelper.setSubject(subject);

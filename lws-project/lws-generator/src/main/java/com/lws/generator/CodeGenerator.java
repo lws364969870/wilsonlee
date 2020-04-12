@@ -87,7 +87,8 @@ public class CodeGenerator {
         fileOutConfigList.add(new FileOutConfig("/templates/mapper.xml.ftl") {
             @Override
             public String outputFile(TableInfo tableInfo) {
-                return projectPath + "/src/main/resources/mapper/" + tableInfo.getEntityName() + "Mapper" + StringPool.DOT_XML;
+                return projectPath + "/src/main/resources/mapper/" + tableInfo.getEntityName() + "Mapper"
+                    + StringPool.DOT_XML;
             }
         });
 
@@ -101,7 +102,6 @@ public class CodeGenerator {
             }
         };
         injectionConfig.setFileOutConfigList(fileOutConfigList);
-
 
         /** 代码生成 */
         autoGenerator.setGlobalConfig(globalConfig);

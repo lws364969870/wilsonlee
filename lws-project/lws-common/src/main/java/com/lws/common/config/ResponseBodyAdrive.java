@@ -11,26 +11,25 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
 
 /**
- *
- *
  * @author wilsonlee
  * @date 20191213
  */
-@ControllerAdvice
+//@ControllerAdvice
 public class ResponseBodyAdrive implements ResponseBodyAdvice<Object> {
 
     public boolean supports(MethodParameter methodParameter, Class aClass) {
         if (aClass.isAssignableFrom(MappingJackson2HttpMessageConverter.class)) {
             return true;
         }
-        if(aClass.isAssignableFrom(StringHttpMessageConverter.class)){
+        if (aClass.isAssignableFrom(StringHttpMessageConverter.class)) {
             return true;
         }
         return false;
     }
 
-    public Object beforeBodyWrite(Object object, MethodParameter methodParameter, MediaType mediaType, Class aClass, ServerHttpRequest serverHttpRequest, ServerHttpResponse serverHttpResponse) {
-        if(aClass.isAssignableFrom(StringHttpMessageConverter.class)){
+    public Object beforeBodyWrite(Object object, MethodParameter methodParameter, MediaType mediaType, Class aClass,
+        ServerHttpRequest serverHttpRequest, ServerHttpResponse serverHttpResponse) {
+        if (aClass.isAssignableFrom(StringHttpMessageConverter.class)) {
 
         }
         if (null != object) {

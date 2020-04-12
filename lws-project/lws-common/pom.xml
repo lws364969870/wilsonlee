@@ -6,12 +6,12 @@
     <parent>
         <groupId>com.lws</groupId>
         <artifactId>lws-parent</artifactId>
-        <version>1.0.0</version>
+        <version>1.0.0-SNAPSHOT</version>
     </parent>
 
     <groupId>com.lws</groupId>
     <artifactId>lws-common</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <dependencies>
